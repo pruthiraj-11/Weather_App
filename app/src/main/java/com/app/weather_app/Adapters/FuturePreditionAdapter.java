@@ -28,15 +28,17 @@ public class FuturePreditionAdapter extends RecyclerView.Adapter<FuturePredition
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_hourly,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_future,parent,false);
         context= parent.getContext();
         return new viewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
-//        holder.textView1.setText(list.get(position).getHour());
-//        holder.textView2.setText(list.get(position).getTemp()+"");
+        holder.textView1.setText(list.get(position).getHighTemp());
+        holder.textView2.setText(list.get(position).getLowTemp());
+        holder.textView3.setText(list.get(position).getDay());
+        holder.textView4.setText(list.get(position).getStatus());
 
         int drawableResourceId=holder.itemView.getResources().getIdentifier(list.get(position).getPicPath(),"drawable",holder.itemView.getContext().getPackageName());
 
@@ -52,12 +54,14 @@ public class FuturePreditionAdapter extends RecyclerView.Adapter<FuturePredition
 
     public static class viewholder extends RecyclerView.ViewHolder{
         ImageView imageView;
-        TextView textView1,textView2;
+        TextView textView1,textView2,textView3,textView4;
         public viewholder(@NonNull View itemView) {
             super(itemView);
-            imageView=itemView.findViewById(R.id.pic);
-            textView1=itemView.findViewById(R.id.hourText);
-            textView2=itemView.findViewById(R.id.hourtemp);
+            imageView=itemView.findViewById(R.id.weatherimg);
+            textView1=itemView.findViewById(R.id.hightxt);
+            textView2=itemView.findViewById(R.id.lowtxt);
+            textView3=itemView.findViewById(R.id.daytxt);
+            textView4=itemView.findViewById(R.id.statustxt);
         }
     }
 }
