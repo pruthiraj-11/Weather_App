@@ -21,6 +21,7 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/backbtn"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_margin="16dp">
@@ -203,6 +204,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginTop="16dp"
                 android:nestedScrollingEnabled="true"/>
 
         </LinearLayout>

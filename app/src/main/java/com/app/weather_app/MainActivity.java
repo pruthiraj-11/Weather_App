@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.app.weather_app.Adapters.HourlyAdapter;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initRecyclerView();
+        binding.nextbtn.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, FutureActivity.class)));
     }
 
     private void initRecyclerView() {
