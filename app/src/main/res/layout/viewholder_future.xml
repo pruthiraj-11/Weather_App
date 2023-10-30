@@ -26,11 +26,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:src="@tools:sample/avatars"
+        android:src="@drawable/sunny"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/daytxt"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sunny" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/statustxt"

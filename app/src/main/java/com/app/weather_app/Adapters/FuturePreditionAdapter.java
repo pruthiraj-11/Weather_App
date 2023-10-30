@@ -35,8 +35,8 @@ public class FuturePreditionAdapter extends RecyclerView.Adapter<FuturePredition
 
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
-        holder.textView1.setText(list.get(position).getHighTemp());
-        holder.textView2.setText(list.get(position).getLowTemp());
+        holder.textView1.setText(""+list.get(position).getHighTemp());
+        holder.textView2.setText(""+list.get(position).getLowTemp());
         holder.textView3.setText(list.get(position).getDay());
         holder.textView4.setText(list.get(position).getStatus());
 
